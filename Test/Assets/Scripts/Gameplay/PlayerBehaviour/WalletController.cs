@@ -10,6 +10,7 @@ namespace Gameplay.PlayerBehaviour
     {
         [SerializeField] private ItemsConfigsHolder itemsConfigsHolder;
         [SerializeField] private List<WalletView> walletViews;
+        [SerializeField] private WalletView balanceWalletView;
         [SerializeField] private WalletEntity walletEntity;
 
         private void Start()
@@ -19,6 +20,9 @@ namespace Gameplay.PlayerBehaviour
 
         private void InitializeWallet()
         {
+            balanceWalletView.SetIcon(null);
+            balanceWalletView.SetText(walletEntity.moneyBalance);
+            balanceWalletView.Activate();
             walletEntity.items.ForEach(i =>
             {
                 var currentView = walletViews.Find(v => !v.IsActive());
@@ -33,6 +37,7 @@ namespace Gameplay.PlayerBehaviour
         public void IncreaseBalance(int value)
         {
             walletEntity.moneyBalance += value;
+            balanceWalletView.SetText(walletEntity.moneyBalance);
         }
 
         public void DecreaseBalance(int value)
@@ -43,6 +48,7 @@ namespace Gameplay.PlayerBehaviour
             }
 
             walletEntity.moneyBalance -= value;
+            balanceWalletView.SetText(walletEntity.moneyBalance);
         }
 
         public void IncreaseWallet(int id, int value)

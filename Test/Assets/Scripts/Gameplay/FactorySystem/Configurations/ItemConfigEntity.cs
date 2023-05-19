@@ -9,6 +9,7 @@ namespace Gameplay.FactorySystem.Configurations
     public class ItemConfigEntity
     {
         public int id;
+        public int price;
         public Sprite sprite;
     }
 

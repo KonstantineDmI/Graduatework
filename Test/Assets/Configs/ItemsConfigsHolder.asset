@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsConfigs:
   - id: 0
+    price: 10
     sprite: {fileID: 21300000, guid: 49d6476676178884cb6dda8c12406acc, type: 3}
   - id: 1
+    price: 20
     sprite: {fileID: 21300000, guid: da591e1cc6c77224a8cf1da40304493a, type: 3}
   - id: 2
+    price: 100
     sprite: {fileID: 21300000, guid: 44bc7c341e8b81940a89335995b4c3e8, type: 3}

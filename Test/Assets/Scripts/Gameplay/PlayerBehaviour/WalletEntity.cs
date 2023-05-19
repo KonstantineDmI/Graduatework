@@ -9,6 +9,7 @@ namespace Gameplay.PlayerBehaviour
     [Serializable]
     public class WalletEntity
     {
+        public int moneyBalance;
         public int maxItemCapacity;
         public List<ItemsHolder> items;
     }

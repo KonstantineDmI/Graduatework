@@ -30,6 +30,21 @@ namespace Gameplay.PlayerBehaviour
             });
         }
 
+        public void IncreaseBalance(int value)
+        {
+            walletEntity.moneyBalance += value;
+        }
+
+        public void DecreaseBalance(int value)
+        {
+            if (walletEntity.moneyBalance - value < 0)
+            {
+                return;
+            }
+
+            walletEntity.moneyBalance -= value;
+        }
+
         public void IncreaseWallet(int id, int value)
         {
             var currentItem = walletEntity.items.Find(i => i.itemId == id);
@@ -47,6 +62,11 @@ namespace Gameplay.PlayerBehaviour
         public bool HaveNoItems(int id)
         {
            return walletEntity.items.Find(i => i.itemId == id).itemsCapacity == 0;
+        }
+
+        public bool HaveNoMoney()
+        {
+            return walletEntity.moneyBalance == 0;
         }
 
         public bool StackIsFull(int id)

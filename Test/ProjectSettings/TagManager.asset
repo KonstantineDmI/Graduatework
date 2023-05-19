@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OutputStorage
   - InputStorage
+  - Shop
   layers:
   - Default
   - TransparentFX

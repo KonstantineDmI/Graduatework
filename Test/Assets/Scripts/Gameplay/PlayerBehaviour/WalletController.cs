@@ -75,6 +75,13 @@ namespace Gameplay.PlayerBehaviour
             return walletEntity.moneyBalance == 0;
         }
 
+        public List<int> GetExistingItemsIds()
+        {
+            List<int> ids = new List<int>();
+            walletEntity.items.ForEach(i => ids.Add(i.itemId));
+            return ids;
+        }
+
         public bool StackIsFull(int id)
         {
             return walletEntity.items.Find(i => i.itemId == id).itemsCapacity == walletEntity.maxItemCapacity;

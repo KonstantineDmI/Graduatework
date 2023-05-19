@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Gameplay.FactorySystem;
+using Gameplay.FactorySystem.Configurations;
 using Gameplay.FactorySystem.Items;
 using Gameplay.FactorySystem.Storage;
 using Gameplay.PlayerBehaviour;
@@ -14,8 +15,10 @@ namespace Gameplay
         [SerializeField] private PlayerController playerController;
         [SerializeField] private List<StorageBase> storages;
         [SerializeField] private List<FactoryBase> factories;
+        [SerializeField] private ShopBase shop;
         [SerializeField] private WalletController walletController;
         [SerializeField] private ItemsPool itemsPool;
+        [SerializeField] private ItemsConfigsHolder itemsConfigsHolder;
 
         private Coroutine _triggerActionRoutine;
 
@@ -26,6 +29,8 @@ namespace Gameplay
 
         private void Initialize()
         {
+            shop.OnPlayerEnter += StartShopTriggerActionTracking;
+            shop.OnPlayerExit += StopTriggerActionTracking;
             storages.ForEach(s =>
             {
                 s.OnPlayerEnter += StartTriggerActionTracking;
@@ -38,10 +43,24 @@ namespace Gameplay
             _triggerActionRoutine = StartCoroutine(TriggerActionCoroutine(storage, itemsIds, value));
         }
 
+        private void StartShopTriggerActionTracking(ShopBase shopBase, int value)
+        {
+            _triggerActionRoutine = StartCoroutine(ShopTriggerActionCoroutine(shopBase, value));
+        }
+
         private void StopTriggerActionTracking()
         {
             StopCoroutine(_triggerActionRoutine);
             _triggerActionRoutine = null;
+        }
+
+        private IEnumerator ShopTriggerActionCoroutine(ShopBase shopBase, int value)
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(playerController.GrabDuration);
+                SellTriggerAction(shopBase, value);
+            }
         }
 
         private IEnumerator TriggerActionCoroutine(StorageBase storage, List<int> itemsIds, int value)
@@ -51,6 +70,25 @@ namespace Gameplay
                 yield return new WaitForSeconds(playerController.GrabDuration);
                 TriggerAction(storage, itemsIds, value);
             }
+        }
+
+        private void SellTriggerAction(ShopBase shopBase, int value)
+        {
+            walletController.GetExistingItemsIds().ForEach(itemId =>
+            {
+                if (walletController.HaveNoItems(itemId))
+                {
+                    return;
+                }
+                walletController.IncreaseBalance(itemsConfigsHolder.itemsConfigs.Find(i => i.id == itemId).price);
+                walletController.DecreaseWallet(itemId, value);
+                if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+                {
+                    return;
+                }
+                var item = playerController.BackPackView.GetItemById(itemId);
+                itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
+            });
         }
 
 

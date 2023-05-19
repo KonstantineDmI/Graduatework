@@ -37,7 +37,6 @@ namespace Gameplay.PlayerBehaviour.InventorySystem
         public ItemView GetItemById(int id)
         {
             var backPackSlot = backPackSlots.Find(x => x.SlotIsBusy && x.ItemInSlot.Id == id);
-            Debug.Log(backPackSlot);
             return backPackSlot.ItemInSlot;
         }
 

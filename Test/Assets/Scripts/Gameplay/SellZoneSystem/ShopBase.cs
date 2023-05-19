@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShopBase : MonoBehaviour
 {
-    public event Action<ShopBase, int> OnPlayerEnter;
+    public event Action<ShopBase int> OnPlayerEnter;
     public event Action OnPlayerExit;
 
 

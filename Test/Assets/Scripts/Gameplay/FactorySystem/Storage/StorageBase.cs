@@ -61,6 +61,12 @@ namespace Gameplay.FactorySystem.Storage
         {
             return GetCapacityByItemId(id) > 0;
         }
+
+        public bool FullOfItemsById(int id)
+        {
+            var currentItem = storageEntity.ItemsHolder.Find(i => i.itemId == id);
+            return currentItem.itemsCapacity == currentItem.maxCapacity;
+        }
         
         private int GetTotalCapacity()
         {

@@ -62,12 +62,16 @@ namespace Gameplay
                 {
                     case StorageTypes.Input:
                     {
-                        if (walletController.HaveNoItems(itemId) || storage.StorageIsFull())
+                        if (walletController.HaveNoItems(itemId) || storage.FullOfItemsById(itemId))
                         {
                             return;
                         }
                         walletController.DecreaseWallet(itemId, value);
                         storage.FillStorage(itemId, value);
+                        if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+                        {
+                            return;
+                        }
                         var item = playerController.BackPackView.GetItemById(itemId);
                         itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item,playerController.BackPackView.RemoveItem(itemId),storage.transform, true);
                         break;
@@ -85,7 +89,7 @@ namespace Gameplay
                         {
                             var item = itemsPool.GetFreeItemById(itemId);
                             itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, storage.transform,
-                                playerController.BackPackView.AddItem(item),false);
+                            playerController.BackPackView.AddItem(item),false);
                         }
 
                         break;

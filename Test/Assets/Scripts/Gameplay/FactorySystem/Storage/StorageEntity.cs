@@ -22,7 +22,7 @@ namespace Gameplay.FactorySystem.Storage
             _itemsHolders = new List<ItemsHolder>();
             items.ForEach(i =>
             {
-                _itemsHolders.Add(new ItemsHolder() {itemId = i.id, itemsCapacity = 0});
+                _itemsHolders.Add(new ItemsHolder() {itemId = i.id, itemsCapacity = 0, maxCapacity = (maxCapacity / items.Count)});
             });
         }
     }

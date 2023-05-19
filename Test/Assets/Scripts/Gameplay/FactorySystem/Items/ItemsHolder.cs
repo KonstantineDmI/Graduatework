@@ -11,5 +11,6 @@ namespace Gameplay.FactorySystem.Items
     {
         public int itemId;
         public int itemsCapacity;
+        public int maxCapacity;
     }
 }

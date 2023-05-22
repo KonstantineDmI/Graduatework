@@ -67,6 +67,11 @@ namespace Gameplay.FactorySystem.Storage
             var currentItem = storageEntity.ItemsHolder.Find(i => i.itemId == id);
             return currentItem.itemsCapacity == currentItem.maxCapacity;
         }
+
+        public void InitializeCapacity(int currentValue)
+        {
+            storageEntity.InitializeMaxCapacity(currentValue);
+        }
         
         private int GetTotalCapacity()
         {

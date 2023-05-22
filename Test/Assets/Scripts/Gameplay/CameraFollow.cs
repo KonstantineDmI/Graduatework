@@ -10,6 +10,7 @@ namespace Gameplay
         [SerializeField] private Transform transformToFollow;
         [SerializeField] private float followSmooth;
         [SerializeField] private Vector3 offset;
+        
 
         private Vector3 _velocity;
 
@@ -22,6 +23,8 @@ namespace Gameplay
         {
             var offsetPosition = transformToFollow.position + offset;
             transform.position = Vector3.SmoothDamp(transform.position, offsetPosition, ref _velocity, followSmooth);
+            //var yRotation = Quaternion.RotateTowards(transform.rotation, transformToFollow.rotation, 100).y;
+            //transform.rotation = new Quaternion(transform.rotation.x, yRotation, transform.rotation.z, transform.rotation.w);
         }
     }
 

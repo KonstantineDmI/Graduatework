@@ -5530,6 +5530,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1272998936}
     - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
+      propertyPath: factoryEntity.id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
       propertyPath: factoryEntity.storageToFill
       value: 
       objectReference: {fileID: 1464121703}
@@ -7270,6 +7274,10 @@ PrefabInstance:
       propertyPath: itemsPool
       value: 
       objectReference: {fileID: 1272998936}
+    - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
+      propertyPath: factoryEntity.id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
       propertyPath: factoryEntity.storageToFill
       value: 

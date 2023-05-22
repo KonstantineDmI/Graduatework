@@ -31,6 +31,7 @@ namespace Gameplay.FactorySystem
         private void InitializeFactory()
         {
             factoryEntity.InitializeStorages();
+            factoryEntity.InitializeFactory();
             InitializeView();
 
             StartCoroutine(ManufactureCoroutine());

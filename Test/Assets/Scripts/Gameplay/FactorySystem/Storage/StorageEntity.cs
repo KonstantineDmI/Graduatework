@@ -17,6 +17,11 @@ namespace Gameplay.FactorySystem.Storage
         public List<ItemsHolder> ItemsHolder => _itemsHolders;
         public int MaxCapacity => maxCapacity;
 
+        public void InitializeMaxCapacity(int currentValue)
+        {
+            maxCapacity = currentValue;
+        }
+
         public void SetItemsToStorage(List<Item> items)
         {
             _itemsHolders = new List<ItemsHolder>();

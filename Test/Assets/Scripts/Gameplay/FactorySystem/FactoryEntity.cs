@@ -11,6 +11,8 @@ namespace Gameplay.FactorySystem
     [Serializable]
     public class FactoryEntity
     {
+        [SerializeField] private int id;
+        [SerializeField] private FactoriesUpgradeConfig factoriesUpgradeConfig;
         [Header("Produce settings")]
         [SerializeField] private float manufactureDuration;
         [Space]
@@ -27,6 +29,7 @@ namespace Gameplay.FactorySystem
         public event Action<int, Transform> OnPutItem;
 
         public float ManufactureDuration => manufactureDuration;
+        
 
         public void InitializeStorages()
         {
@@ -77,6 +80,16 @@ namespace Gameplay.FactorySystem
                 storageToFill.FillStorage(i.id, 1);
                 OnPutItem?.Invoke(i.id, storageToFill.transform);
             });
+        }
+
+        public void InitializeFactory()
+        {
+            var factoryUpgradeConfig = factoriesUpgradeConfig.upgradeEntities.Find(upgrade => upgrade.factoryId == id);
+            var manufactureSpeed = factoryUpgradeConfig.productionSpeedLevels[factoryUpgradeConfig.level];
+            var capacity = factoryUpgradeConfig.capacityLevels[factoryUpgradeConfig.level];
+            manufactureDuration = manufactureSpeed;
+            storageToFill.InitializeCapacity(capacity);
+            storageToGrab.InitializeCapacity(capacity);
         }
     }
 }

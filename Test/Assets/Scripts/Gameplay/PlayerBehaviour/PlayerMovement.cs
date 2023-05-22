@@ -12,11 +12,14 @@ namespace Gameplay.PlayerBehaviour
         [SerializeField] private float distanceBetweenGround;
         [SerializeField] private Rigidbody rigidBody;
         [SerializeField] private Collider collider;
+        [SerializeField] private PlayerAnimator playerAnimator;
         
         
         public void Move(Vector2 axises)
         {
             ApplyMovement(axises);
+            playerAnimator.SetRunAnimation(1);
+
         }
         
         private void ApplyMovement(Vector2 axises)
@@ -34,6 +37,7 @@ namespace Gameplay.PlayerBehaviour
         
         public void ResetVelocity(Vector2 direction)
         {
+            playerAnimator.SetRunAnimation(0);
             rigidBody.velocity = new Vector3(0f, rigidBody.velocity.y, 0f);
         }
 

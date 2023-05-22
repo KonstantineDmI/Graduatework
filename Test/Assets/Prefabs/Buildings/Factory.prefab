@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.04, y: 1.33, z: -15.6589}
   m_LocalScale: {x: 5.4344597, y: 1.0597, z: 2.8699856}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6582709865091057520}
   m_Father: {fileID: 0}
@@ -54,6 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -111,11 +113,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsConfigsHolder: {fileID: 11400000, guid: a2bca4ad35abcf44e80aa3badc4e8564, type: 2}
   factoryEntity:
+    id: 0
+    factoriesUpgradeConfig: {fileID: 11400000, guid: 3ffb27417dc60f943895b97ae5479514, type: 2}
+    manufactureDuration: 0
     consumableItems: []
     manufacturedItems: []
     storageToFill: {fileID: 0}
     storageToGrab: {fileID: 0}
   factoryView: {fileID: 5599384223148937895}
+  itemsPool: {fileID: 0}
 --- !u!1001 &3487716635669814102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,16 +291,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa3c4aad77ed424d9bf2c6afb118d1b, type: 3}
---- !u!224 &6582709865091057520 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7727227479838399526, guid: eaa3c4aad77ed424d9bf2c6afb118d1b, type: 3}
-  m_PrefabInstance: {fileID: 3487716635669814102}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &933227287997387417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4365578529897236943, guid: eaa3c4aad77ed424d9bf2c6afb118d1b, type: 3}
-  m_PrefabInstance: {fileID: 3487716635669814102}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &711022951884006270 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4159307724399835176, guid: eaa3c4aad77ed424d9bf2c6afb118d1b, type: 3}
@@ -306,6 +302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &933227287997387417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4365578529897236943, guid: eaa3c4aad77ed424d9bf2c6afb118d1b, type: 3}
+  m_PrefabInstance: {fileID: 3487716635669814102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5599384223148937895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,3 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   consumableItemImage: {fileID: 711022951884006270}
+--- !u!224 &6582709865091057520 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7727227479838399526, guid: eaa3c4aad77ed424d9bf2c6afb118d1b, type: 3}
+  m_PrefabInstance: {fileID: 3487716635669814102}
+  m_PrefabAsset: {fileID: 0}

@@ -25,9 +25,10 @@ namespace Gameplay.PlayerBehaviour
         private void ApplyMovement(Vector2 axises)
         {
             var velocity = GetYVelocity();
-            Vector3 direction = new Vector3(axises.x, velocity, axises.y);
+            Vector3 direction = new Vector3(axises.x, 0f, axises.y);
             rigidBody.velocity = direction * (Time.deltaTime * movementSpeed) * movementForce;
             UpdateRotation(rigidBody.velocity);
+            rigidBody.velocity = new Vector3(rigidBody.velocity.x, -3f, rigidBody.velocity.z);
         }
 
         public bool IsGrounded()
@@ -38,7 +39,7 @@ namespace Gameplay.PlayerBehaviour
         public void ResetVelocity(Vector2 direction)
         {
             playerAnimator.SetRunAnimation(0);
-            rigidBody.velocity = new Vector3(0f, rigidBody.velocity.y, 0f);
+            rigidBody.velocity = new Vector3(0f, 0f, 0f);
         }
 
         private void UpdateRotation(Vector3 direction)

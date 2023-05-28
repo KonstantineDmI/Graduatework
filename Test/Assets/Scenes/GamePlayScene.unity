@@ -394,6 +394,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83cae0b73b6ca73468c43e3a5bb6bca7, type: 3}
+--- !u!1 &64337346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64337348}
+  - component: {fileID: 64337347}
+  m_Layer: 0
+  m_Name: QuestController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &64337347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64337346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7678196e138320a42a2bc07454716cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  sideQuests:
+  - {fileID: 1871937557}
+  - {fileID: 603170881}
+  - {fileID: 1324333932}
+--- !u!4 &64337348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64337346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -586.5928, y: 980.8015, z: 3105.6306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &73223738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5133,6 +5182,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603170879}
+  - component: {fileID: 603170881}
+  - component: {fileID: 603170880}
   m_Layer: 0
   m_Name: FuelSpot
   m_TagString: Untagged
@@ -5182,6 +5233,38 @@ Transform:
   m_Father: {fileID: 1131264918}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603170880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603170878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7e98784bfceb64f9a0326bfe5574f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sideQuests:
+  - {fileID: 603170881}
+--- !u!114 &603170881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603170878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c55e159a2ff3d4793100cd5a38cc7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  questIsPassed: 0
+  questIsActive: 0
+  itemForQuest:
+    id: 0
+  neededAmountOfItems: 0
 --- !u!1001 &604584156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11512,6 +11595,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324333931}
+  - component: {fileID: 1324333932}
+  - component: {fileID: 1324333933}
   m_Layer: 0
   m_Name: RadarSpot
   m_TagString: Untagged
@@ -11575,6 +11660,38 @@ Transform:
   m_Father: {fileID: 1131264918}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1324333932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324333930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c55e159a2ff3d4793100cd5a38cc7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  questIsPassed: 0
+  questIsActive: 0
+  itemForQuest:
+    id: 0
+  neededAmountOfItems: 0
+--- !u!114 &1324333933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324333930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7e98784bfceb64f9a0326bfe5574f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sideQuests:
+  - {fileID: 1324333932}
 --- !u!1001 &1334430091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15559,6 +15676,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1871937555}
+  - component: {fileID: 1871937557}
+  - component: {fileID: 1871937556}
   m_Layer: 0
   m_Name: SolarsPanelField
   m_TagString: Untagged
@@ -15626,6 +15745,38 @@ Transform:
   m_Father: {fileID: 1131264918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1871937556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871937554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7e98784bfceb64f9a0326bfe5574f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sideQuests:
+  - {fileID: 1871937557}
+--- !u!114 &1871937557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871937554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c55e159a2ff3d4793100cd5a38cc7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  questIsPassed: 0
+  questIsActive: 0
+  itemForQuest:
+    id: 0
+  neededAmountOfItems: 0
 --- !u!4 &1873285198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 483000, guid: 83cae0b73b6ca73468c43e3a5bb6bca7, type: 3}

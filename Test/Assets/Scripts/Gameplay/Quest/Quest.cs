@@ -14,9 +14,13 @@ public class Quest : MonoBehaviour
         return sideQuests.Find(q => !q.questIsPassed);
     }
 
-    private void Start()
+    private void Awake()
     {
         InitializeQuest();
+    }
+
+    private void Start()
+    {
         InitializeSideQuest();
     }
 
@@ -27,8 +31,7 @@ public class Quest : MonoBehaviour
 
     private void InitializeSideQuest()
     {
-        sideQuests.ForEach(q => q.questIsActive = false);
-        Debug.Log(sideQuests.First(q => !q.questIsPassed && !q.questIsActive));
-        var here = sideQuests.First(q => !q.questIsPassed && !q.questIsActive).questIsActive = true;
+        sideQuests.ForEach(q => q.QuestIsActive = false);
+        var here = sideQuests.First(q => !q.questIsPassed && !q.QuestIsActive).QuestIsActive = true;
     }
 }

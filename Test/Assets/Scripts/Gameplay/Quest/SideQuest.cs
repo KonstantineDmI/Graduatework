@@ -8,9 +8,33 @@ public class SideQuest : MonoBehaviour
 {
     public int id;
     public bool questIsPassed;
-    public bool questIsActive;
 
     public event Action OnQuestPassed;
+    public event Action OnQuestActive;
+    public event Action OnQuestUpdate;
+
+
+    public int NeededAmound
+    {
+        get => neededAmountOfItems;
+    }
+
+    public bool QuestIsActive
+    {
+        get => _questIsActive;
+        set
+        {
+            if (value)
+            {
+                _questIsActive = value;
+                OnQuestActive?.Invoke();
+                return;
+            }
+
+            _questIsActive = value;
+
+        }
+    }
 
 
     public int CurrentAmount
@@ -26,14 +50,21 @@ public class SideQuest : MonoBehaviour
             }
 
             _currentAmount += value;
+            OnQuestUpdate?.Invoke();
 
         }
     }
 
+    public Item ItemForQuest
+    {
+        get => itemForQuest;
+    }
 
-    [SerializeField] public Item itemForQuest;
+
+    [SerializeField] private Item itemForQuest;
     [SerializeField] private int neededAmountOfItems;
 
     private int _currentAmount;
+    private bool _questIsActive;
 
 }

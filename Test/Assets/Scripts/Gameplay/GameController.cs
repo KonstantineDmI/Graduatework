@@ -15,6 +15,7 @@ namespace Gameplay
         [SerializeField] private PlayerController playerController;
         [SerializeField] private List<StorageBase> storages;
         [SerializeField] private List<FactoryBase> factories;
+        [SerializeField] private List<QuestSpot> questSpots;
         [SerializeField] private ShopBase shop;
         [SerializeField] private WalletController walletController;
         [SerializeField] private ItemsPool itemsPool;
@@ -31,6 +32,13 @@ namespace Gameplay
         {
             shop.OnPlayerEnter += StartShopTriggerActionTracking;
             shop.OnPlayerExit += StopTriggerActionTracking;
+
+            questSpots.ForEach(q =>
+            {
+                q.OnPlayerEnter += StartQuestTriggerActionTracking;
+                q.OnPlayerExit += StopTriggerActionTracking;
+            });
+
             storages.ForEach(s =>
             {
                 s.OnPlayerEnter += StartTriggerActionTracking;
@@ -48,6 +56,11 @@ namespace Gameplay
             _triggerActionRoutine = StartCoroutine(ShopTriggerActionCoroutine(shopBase, value));
         }
 
+        private void StartQuestTriggerActionTracking(SideQuest sideQuest)
+        {
+            _triggerActionRoutine = StartCoroutine(QuestTriggerActionCoroutine(sideQuest));
+        }
+
         private void StopTriggerActionTracking()
         {
             StopCoroutine(_triggerActionRoutine);
@@ -60,6 +73,15 @@ namespace Gameplay
             {
                 yield return new WaitForSeconds(playerController.GrabDuration);
                 SellTriggerAction(shopBase, value);
+            }
+        }
+
+        private IEnumerator QuestTriggerActionCoroutine(SideQuest sideQuest)
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(playerController.GrabDuration);
+                QuestTriggerAction(sideQuest);
             }
         }
 
@@ -82,6 +104,25 @@ namespace Gameplay
                 }
                 walletController.IncreaseBalance(itemsConfigsHolder.itemsConfigs.Find(i => i.id == itemId).price);
                 walletController.DecreaseWallet(itemId, value);
+                if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+                {
+                    return;
+                }
+                var item = playerController.BackPackView.GetItemById(itemId);
+                itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
+            });
+        }
+
+        private void QuestTriggerAction(SideQuest sideQuest)
+        {
+            walletController.GetExistingItemsIds().ForEach(itemId =>
+            {
+                if (walletController.HaveNoItems(itemId))
+                {
+                    return;
+                }
+                walletController.DecreaseWallet(itemId, 1);
+                sideQuest.CurrentAmount = 1;
                 if (!playerController.BackPackView.ItemByIdIsExist(itemId))
                 {
                     return;

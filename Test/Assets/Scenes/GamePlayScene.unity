@@ -16282,7 +16282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 458459a2164699f40acd24630e63bdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 4829197111496707215, guid: cbc9d21b1bd379f4ca4ddfcb15a676ef, type: 3}
+  objectPrefab: {fileID: 0}
   timeBetweenObjects: 0.3
   randomTimeFactor: 0.3
   activated: 1

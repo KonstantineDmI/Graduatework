@@ -11,7 +11,7 @@ namespace Gameplay.PlayerBehaviour
         [SerializeField] private float rotationSpeed;
         [SerializeField] private float distanceBetweenGround;
         [SerializeField] private Rigidbody rigidBody;
-        [SerializeField] private Collider collider;
+        [SerializeField] private Collider colider;
         [SerializeField] private PlayerAnimator playerAnimator;
         
         
@@ -33,7 +33,7 @@ namespace Gameplay.PlayerBehaviour
 
         public bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, collider.bounds.size.y + distanceBetweenGround);
+            return Physics.Raycast(transform.position, Vector3.down, colider.bounds.size.y + distanceBetweenGround);
         }
         
         public void ResetVelocity(Vector2 direction)

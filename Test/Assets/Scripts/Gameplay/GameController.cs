@@ -104,12 +104,12 @@ namespace Gameplay
                 }
                 walletController.IncreaseBalance(itemsConfigsHolder.itemsConfigs.Find(i => i.id == itemId).price);
                 walletController.DecreaseWallet(itemId, value);
-                if (!playerController.BackPackView.ItemByIdIsExist(itemId))
-                {
-                    return;
-                }
-                var item = playerController.BackPackView.GetItemById(itemId);
-                itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
+                //if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+                //{
+                //    return;
+                //}
+                //var item = playerController.BackPackView.GetItemById(itemId);
+                //itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
             });
         }
 
@@ -123,12 +123,12 @@ namespace Gameplay
                 }
                 walletController.DecreaseWallet(itemId, 1);
                 sideQuest.CurrentAmount = 1;
-                if (!playerController.BackPackView.ItemByIdIsExist(itemId))
-                {
-                    return;
-                }
-                var item = playerController.BackPackView.GetItemById(itemId);
-                itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
+                //if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+                //{
+                //    return;
+                //}
+                //var item = playerController.BackPackView.GetItemById(itemId);
+                //itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
             });
         }
 
@@ -147,12 +147,12 @@ namespace Gameplay
                         }
                         walletController.DecreaseWallet(itemId, value);
                         storage.FillStorage(itemId, value);
-                        if (!playerController.BackPackView.ItemByIdIsExist(itemId))
-                        {
-                            return;
-                        }
-                        var item = playerController.BackPackView.GetItemById(itemId);
-                        itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item,playerController.BackPackView.RemoveItem(itemId),storage.transform, true);
+                        //if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+                        //{
+                        //    return;
+                        //}
+                        //var item = playerController.BackPackView.GetItemById(itemId);
+                        //itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item,playerController.BackPackView.RemoveItem(itemId),storage.transform, true);
                         break;
                     }
                     case StorageTypes.Output:
@@ -164,12 +164,12 @@ namespace Gameplay
                     
                         walletController.IncreaseWallet(itemId, value);
                         storage.GrabFromStorage(itemId, value);
-                        if (!playerController.BackPackView.AllSlotsAreBusy())
-                        {
-                            var item = itemsPool.GetFreeItemById(itemId);
-                            itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, storage.transform,
-                            playerController.BackPackView.AddItem(item),false);
-                        }
+                        //if (!playerController.BackPackView.AllSlotsAreBusy())
+                        //{
+                        //    var item = itemsPool.GetFreeItemById(itemId);
+                        //    itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, storage.transform,
+                        //    playerController.BackPackView.AddItem(item),false);
+                        //}
 
                         break;
                     }

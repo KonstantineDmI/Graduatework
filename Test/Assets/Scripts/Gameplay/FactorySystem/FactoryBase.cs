@@ -14,6 +14,7 @@ namespace Gameplay.FactorySystem
         [SerializeField] private FactoryEntity factoryEntity;
         [SerializeField] private FactoryView factoryView;
         [SerializeField] private ItemsPool itemsPool;
+        [SerializeField] private Transform instantiateItemsPoint;
 
         private void Start()
         {
@@ -56,14 +57,14 @@ namespace Gameplay.FactorySystem
 
         private void AnimateItemIn(int id, Transform startTransform)
         {
-            var currentItem = itemsPool.GetFreeItemById(id);
-            itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(currentItem, startTransform, transform, true);
+            //var currentItem = itemsPool.GetFreeItemById(id);
+            //itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(currentItem, startTransform, transform, true);
         } 
         
         private void AnimateItemOut(int id, Transform endTransform)
         {
             var currentItem = itemsPool.GetFreeItemById(id);
-            itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(currentItem, transform, endTransform, true);
+            itemsPool.ItemsVisualAnimation.InstantiateItemOnPoint(currentItem, instantiateItemsPoint);
         }
         
         

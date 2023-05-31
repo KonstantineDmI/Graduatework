@@ -51,7 +51,7 @@ public class FeedingMachine : MonoBehaviour
     {
         if (activated)
         {
-            Invoke("PlaceANewObject", timeBetweenObjects + randomTimeFactor * Random.value);
+            //Invoke("PlaceANewObject", timeBetweenObjects + randomTimeFactor * Random.value);
     
         }
     }
@@ -61,7 +61,7 @@ public class FeedingMachine : MonoBehaviour
     {
         if(activated && !functionInvoked)
         {
-            Invoke("PlaceANewObject", timeBetweenObjects + randomTimeFactor * Random.value);
+            //Invoke("PlaceANewObject", timeBetweenObjects + randomTimeFactor * Random.value);
             functionInvoked = true;
         }else if (!activated)
         {

@@ -50,7 +50,7 @@ public class ConveyorBelt : MonoBehaviour
     private Transform[] measurePoints;
 
     [SerializeField]
-    private bool activated;
+    private bool activated = false;
 
     [SerializeField]
     private bool moveForward;
@@ -76,6 +76,12 @@ public class ConveyorBelt : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if (!activated)
+        {
+            return;
+        }
+
         if (activated)
         {
             //The animation of the conveyor belt running is made moving the uv map in the appropriate direction
@@ -96,7 +102,6 @@ public class ConveyorBelt : MonoBehaviour
             finalVelocity = -velocity * Time.deltaTime / distance;
 
         }
-
 
         if (uVDistribution == UVDistribution.HORIZONTAL)
         {

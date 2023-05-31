@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeEntities:
   - factoryId: 0
-    level: 4
+    level: 0
     upgradesCost: 64000000c80000002c01000090010000f4010000
     capacityLevels: 140000001e00000028000000320000003c000000
     productionSpeedLevels:
@@ -34,6 +34,36 @@ MonoBehaviour:
     - 1.5
     - 1
   - factoryId: 2
+    level: 0
+    upgradesCost: 64000000c80000002c01000090010000f4010000
+    capacityLevels: 140000001e00000028000000320000003c000000
+    productionSpeedLevels:
+    - 3
+    - 2.5
+    - 2
+    - 1.5
+    - 1
+  - factoryId: 3
+    level: 0
+    upgradesCost: 64000000c80000002c01000090010000f4010000
+    capacityLevels: 140000001e00000028000000320000003c000000
+    productionSpeedLevels:
+    - 3
+    - 2.5
+    - 2
+    - 1.5
+    - 1
+  - factoryId: 4
+    level: 0
+    upgradesCost: 64000000c80000002c01000090010000f4010000
+    capacityLevels: 140000001e00000028000000320000003c000000
+    productionSpeedLevels:
+    - 3
+    - 2.5
+    - 2
+    - 1.5
+    - 1
+  - factoryId: 5
     level: 0
     upgradesCost: 64000000c80000002c01000090010000f4010000
     capacityLevels: 140000001e00000028000000320000003c000000

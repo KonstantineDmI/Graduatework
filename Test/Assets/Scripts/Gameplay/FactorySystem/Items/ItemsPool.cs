@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Gameplay.FactorySystem.Items
 {
@@ -8,6 +9,20 @@ namespace Gameplay.FactorySystem.Items
     {
         [SerializeField] private List<ItemView> itemsViews;
         [SerializeField] private ItemsVisualAnimation itemsAnimation;
+        [SerializeField] private List<ItemView> itemsToInstantiate;
+
+        private void Awake()
+        {
+            itemsToInstantiate.ForEach(x =>
+            {
+                for(int i = 0; i < 20; i++)
+                {
+                    var item = Instantiate(x, transform);
+                    item.gameObject.SetActive(false);
+                    itemsViews.Add(item);
+                }
+            });
+        }
 
         public ItemsVisualAnimation ItemsVisualAnimation => itemsAnimation;
 

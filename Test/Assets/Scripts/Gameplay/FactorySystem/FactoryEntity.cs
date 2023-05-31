@@ -15,6 +15,7 @@ namespace Gameplay.FactorySystem
         [SerializeField] private FactoriesUpgradeConfig factoriesUpgradeConfig;
         [Header("Produce settings")]
         [SerializeField] private float manufactureDuration;
+        [SerializeField] private ConveyorBelt conveyor;
         [Space]
         [Header("Items settings")]
         public List<Item> consumableItems;
@@ -61,6 +62,7 @@ namespace Gameplay.FactorySystem
 
         public bool StorageToFillIsFull()
         {
+            conveyor.SetActive(!storageToFill.StorageIsFull());
             return  storageToFill.StorageIsFull();
         }
 
@@ -84,6 +86,7 @@ namespace Gameplay.FactorySystem
 
         public void InitializeFactory()
         {
+            conveyor.SetActive(false);
             var factoryUpgradeConfig = factoriesUpgradeConfig.upgradeEntities.Find(upgrade => upgrade.factoryId == id);
             var manufactureSpeed = factoryUpgradeConfig.productionSpeedLevels[factoryUpgradeConfig.level];
             var capacity = factoryUpgradeConfig.capacityLevels[factoryUpgradeConfig.level];

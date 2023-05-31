@@ -16,6 +16,13 @@ namespace Gameplay.FactorySystem.Items
             StartCoroutine(TransitionAnimationTracker(item, endTransform, deactivateAfterAction));
         }
 
+        public void InstantiateItemOnPoint(ItemView item, Transform point)
+        {
+            item.transform.position = point.position;
+            item.transform.localRotation = Quaternion.identity;
+            item.gameObject.SetActive(true);
+        }
+
         private IEnumerator TransitionAnimationTracker(ItemView item, Transform endTransform, bool deactivateAfterAction)
         {
             while (Vector3.Distance(item.transform.position, endTransform.position) > 1f)

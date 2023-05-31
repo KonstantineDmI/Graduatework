@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsConfigs:
   - id: 0
-    price: 10
+    price: 1000
     sprite: {fileID: 21300000, guid: 7439381cbb74b7c419afa2d3ab0c33ec, type: 3}
   - id: 1
-    price: 20
+    price: 1300
     sprite: {fileID: 21300000, guid: 61a73ae7e73e9b84aa84922bfd4fe377, type: 3}
   - id: 2
-    price: 100
+    price: 2000
     sprite: {fileID: 21300000, guid: 960d59132a1bca24cb3e5ba11522e7ed, type: 3}
   - id: 3
-    price: 100
+    price: 3000
     sprite: {fileID: 21300000, guid: aecfe2956f0d68e4c84a1698247377b5, type: 3}
   - id: 4
-    price: 100
+    price: 5000
     sprite: {fileID: 21300000, guid: 3468be5ea5709c54f8c839d081fa5a4e, type: 3}
   - id: 5
-    price: 100
+    price: 7000
     sprite: {fileID: 21300000, guid: 4d44aa3e6f8bfbc49af6fcca96dd5cbb, type: 3}

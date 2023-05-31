@@ -13,6 +13,11 @@ namespace Gameplay.PlayerBehaviour
         [SerializeField] private WalletView balanceWalletView;
         [SerializeField] private WalletEntity walletEntity;
 
+        public int Balance
+        {
+            get => walletEntity.moneyBalance;
+        }
+
         private void Start()
         {
             InitializeWallet();

@@ -53,10 +53,12 @@ namespace Gameplay.FactorySystem
             {
                 if (!storageToGrab.HasItems(item.id))
                 {
+                    conveyor.SetActive(false);
                     return false;
                 }
             }
-            
+
+            conveyor.SetActive(true);
             return true;
         }
 

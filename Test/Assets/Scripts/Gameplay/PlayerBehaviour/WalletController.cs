@@ -12,6 +12,7 @@ namespace Gameplay.PlayerBehaviour
         [SerializeField] private List<WalletView> walletViews;
         [SerializeField] private WalletView balanceWalletView;
         [SerializeField] private WalletEntity walletEntity;
+        [SerializeField] private Sprite moneyIcon;
 
         public int Balance
         {
@@ -25,7 +26,7 @@ namespace Gameplay.PlayerBehaviour
 
         private void InitializeWallet()
         {
-            balanceWalletView.SetIcon(null);
+            balanceWalletView.SetIcon(moneyIcon);
             balanceWalletView.SetText(walletEntity.moneyBalance);
             balanceWalletView.Activate();
             walletEntity.items.ForEach(i =>

@@ -80,7 +80,7 @@ namespace Gameplay
         {
             while (true)
             {
-                yield return new WaitForSeconds(playerController.GrabDuration);
+                yield return new WaitForSeconds(0.3f);
                 QuestTriggerAction(sideQuest);
             }
         }
@@ -115,14 +115,22 @@ namespace Gameplay
 
         private void QuestTriggerAction(SideQuest sideQuest)
         {
+            if (sideQuest.questIsPassed)
+            {
+                return;
+            }
+
             walletController.GetExistingItemsIds().ForEach(itemId =>
             {
                 if (walletController.HaveNoItems(itemId))
                 {
                     return;
                 }
-                walletController.DecreaseWallet(itemId, 1);
-                sideQuest.CurrentAmount = 1;
+                if(sideQuest.ItemForQuest.id == itemId)
+                {
+                    walletController.DecreaseWallet(itemId, 1);
+                    sideQuest.CurrentAmount = 1;
+                }
                 //if (!playerController.BackPackView.ItemByIdIsExist(itemId))
                 //{
                 //    return;

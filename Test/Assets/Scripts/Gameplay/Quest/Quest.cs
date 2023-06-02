@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,8 @@ public class Quest : MonoBehaviour
 {
     public int id;
     public List<SideQuest> sideQuests;
+    public event Action OnGamePassed;
 
-
-    public SideQuest GetCurrentSideQuest()
-    {
-        return sideQuests.Find(q => !q.questIsPassed);
-    }
 
     private void Awake()
     {
@@ -32,6 +29,13 @@ public class Quest : MonoBehaviour
     private void InitializeSideQuest()
     {
         sideQuests.ForEach(q => q.QuestIsActive = false);
-        var here = sideQuests.First(q => !q.questIsPassed && !q.QuestIsActive).QuestIsActive = true;
+        var gameIsPassed = !sideQuests.Any(q => q.questIsPassed != true);
+        if (gameIsPassed)
+        {
+            OnGamePassed?.Invoke();
+            Debug.Log("GAME IS PASSED");
+            return;
+        }
+        var quest = sideQuests.FirstOrDefault(q => !q.questIsPassed && !q.QuestIsActive).QuestIsActive = true;
     }
 }

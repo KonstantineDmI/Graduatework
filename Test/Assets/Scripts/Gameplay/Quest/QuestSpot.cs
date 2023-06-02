@@ -12,6 +12,7 @@ public class QuestSpot : MonoBehaviour
     [SerializeField] private SideQuest sideQuest;
     [SerializeField] private FactoryView spotView;
     [SerializeField] private ItemsConfigsHolder itemsConfigs;
+    [SerializeField] private GameObject ui;
 
     public event Action<SideQuest> OnPlayerEnter;
     public event Action OnPlayerExit;
@@ -25,6 +26,7 @@ public class QuestSpot : MonoBehaviour
 
     private void InitializeSpot()
     {
+        ui.SetActive(true);
         var icon = itemsConfigs.itemsConfigs.Find(x => x.id == sideQuest.ItemForQuest.id).sprite;
         spotView.gameObject.SetActive(true);
         spotView.SetText(string.Format(textTemplate, sideQuest.CurrentAmount, sideQuest.NeededAmound));
@@ -39,6 +41,7 @@ public class QuestSpot : MonoBehaviour
     private void DeinitializeSpot()
     {
         spotView.gameObject.SetActive(false);
+        ui.SetActive(false);
     }
 
 

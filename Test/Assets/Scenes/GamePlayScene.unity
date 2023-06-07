@@ -5930,6 +5930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7556,6 +7560,10 @@ PrefabInstance:
     - target: {fileID: 184500, guid: 42b967efb8851844db324c133d3a3d9a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_OceanLandingPlatform_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 184500, guid: 42b967efb8851844db324c133d3a3d9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 490960, guid: 42b967efb8851844db324c133d3a3d9a, type: 3}
       propertyPath: m_RootOrder
@@ -13416,6 +13424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -18729,6 +18741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -19042,6 +19058,10 @@ PrefabInstance:
     - target: {fileID: 184500, guid: 42b967efb8851844db324c133d3a3d9a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_OceanLandingPlatform_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184500, guid: 42b967efb8851844db324c133d3a3d9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 490960, guid: 42b967efb8851844db324c133d3a3d9a, type: 3}
       propertyPath: m_RootOrder
@@ -19699,6 +19719,10 @@ PrefabInstance:
     - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
@@ -25980,6 +26004,10 @@ PrefabInstance:
     - target: {fileID: 861874397118214029, guid: 2909cad856b6cfa4082d7e1a83183bdf, type: 3}
       propertyPath: m_Name
       value: Fuel_tank_2_
+      objectReference: {fileID: 0}
+    - target: {fileID: 861874397118214029, guid: 2909cad856b6cfa4082d7e1a83183bdf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8222688165265293479, guid: 2909cad856b6cfa4082d7e1a83183bdf, type: 3}
       propertyPath: m_RootOrder
@@ -32400,6 +32428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -32456,6 +32488,10 @@ PrefabInstance:
     - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
@@ -32530,6 +32566,10 @@ PrefabInstance:
     - target: {fileID: 763799897560185588, guid: 798157bad7358b04499c9d71cd3c0d9b, type: 3}
       propertyPath: m_Name
       value: CFXR2 Sparks Rain
+      objectReference: {fileID: 0}
+    - target: {fileID: 763799897560185588, guid: 798157bad7358b04499c9d71cd3c0d9b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 763799897560185589, guid: 798157bad7358b04499c9d71cd3c0d9b, type: 3}
       propertyPath: m_RootOrder
@@ -43880,6 +43920,10 @@ PrefabInstance:
     - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
@@ -55528,6 +55572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _Fuel_Tank_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6959874754153429620, guid: 77dcc5cb50d4ce8458578fd4fc33d77f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77dcc5cb50d4ce8458578fd4fc33d77f, type: 3}
 --- !u!1001 &979675290
@@ -61460,6 +61508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -61886,6 +61938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6294508013172393186, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6294508013172393187, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -61894,9 +61950,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFXR Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7539286505454239565, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
       propertyPath: m_Range
-      value: 10
+      value: 8.723016
       objectReference: {fileID: 0}
     - target: {fileID: 7539286505454239565, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
       propertyPath: m_Intensity
@@ -67150,6 +67210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -67272,6 +67336,10 @@ PrefabInstance:
     - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
@@ -67609,6 +67677,10 @@ PrefabInstance:
     - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
@@ -68246,6 +68318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -68496,6 +68572,10 @@ PrefabInstance:
     - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
@@ -89426,6 +89506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -89954,6 +90038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_RadioTower_01
       objectReference: {fileID: 0}
+    - target: {fileID: 123378, guid: 6a4a9784fa2fadc4ab610c497f8894a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 425266, guid: 6a4a9784fa2fadc4ab610c497f8894a4, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -90189,6 +90277,10 @@ PrefabInstance:
     - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
@@ -103082,6 +103174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -104015,6 +104111,10 @@ PrefabInstance:
     - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
@@ -105019,6 +105119,10 @@ PrefabInstance:
     - target: {fileID: 8764043878647920493, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_Name
       value: CFXR Fire Breath
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764043878647920493, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8767152486562788127, guid: c4ed38c72957f2241ad144a1614956d9, type: 3}
       propertyPath: m_RootOrder
@@ -110692,6 +110796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Pipes_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 159276, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 487710, guid: 02973a8103552dc4b9ff94fbf6ada651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -110895,6 +111003,10 @@ PrefabInstance:
     - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder
@@ -117287,6 +117399,10 @@ PrefabInstance:
     - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Pipes_Corner_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 196888, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486288, guid: b0232d6d697568144a17d10c38ec00ee, type: 3}
       propertyPath: m_RootOrder

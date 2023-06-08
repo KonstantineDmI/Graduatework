@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +11,7 @@ public class StoryText : ScriptableObject
     [System.Serializable]
     public struct Sentence
     {
+        [TextArea(1, 10)]
         public string text;
     }
 }

@@ -161,8 +161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 13, y: 0}
-  m_SizeDelta: {x: 26, y: 0}
+  m_AnchoredPosition: {x: 0.19677734, y: -0.6873779}
+  m_SizeDelta: {x: 101.3224, y: 101.9921}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614307663
 MonoBehaviour:
@@ -274,8 +274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -800, y: -600}
+  m_AnchoredPosition: {x: -0.19921875, y: 0.6899414}
+  m_SizeDelta: {x: -1001.3275, y: -701.9971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702897324
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 1.7576294, w: 0.2717781}
+  m_margin: {x: 0, y: -1.1105347, z: 1.7576294, w: 0.2717781}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -721,6 +721,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f55adba9e569723489b8704702a0dd20, type: 3}
   - {fileID: 21300000, guid: 0bd0d7dd2ce203c45a7b4a7a7e159e42, type: 3}
   - {fileID: 21300000, guid: c2512166fce24dc418369192bf58f393, type: 3}
+  - {fileID: 21300000, guid: e89ad14a796c868498d70f4acfeb9dde, type: 3}
+  - {fileID: 21300000, guid: f3338d1e32bf2df40bf1efdb5b32f871, type: 3}
+  - {fileID: 21300000, guid: 6aa2a9a99c68b234d9a2942a46809559, type: 3}
+  - {fileID: 21300000, guid: 7cf5b573f38ee5c4890b398add23ec12, type: 3}
+  - {fileID: 21300000, guid: 31b68767ba35bb24e81fbc377af17d70, type: 3}
   animator: {fileID: 614307666}
   currentScene: {fileID: 11400000, guid: 960ec9e31f7314c4d8ed31e7edb03d35, type: 2}
   storyControllerScript: {fileID: 614307663}

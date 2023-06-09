@@ -4,12 +4,19 @@ using UnityEngine.UI;
 
 public class ControllerStoryScene : MonoBehaviour
 {
+    [Header ("Background")]
     [SerializeField] private Image background;
     [SerializeField] private Sprite[] backgrounds;
+
+    [Header ("Animator")]
     [SerializeField] private Animator animator;
+
+    [Header ("Index")]
+    public int currentTextIndex;
+
+    [Header ("Story")]
     public StoryText currentScene;
     public StoryController storyControllerScript;
-    public int currentTextIndex;
 
     private State state = State.IDLE;
     private enum State

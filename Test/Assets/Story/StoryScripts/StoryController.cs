@@ -1,15 +1,9 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using Crosstales.RTVoice;
-using UnityEngine.Rendering;
-using Crosstales.RTVoice.Model;
 using Crosstales.RTVoice.Tool;
-using Crosstales.RTVoice.Demo;
-using UnityEditor;
-using UnityEngine.Diagnostics;
-using Crosstales;
-using System.Linq;
+using Michsky.UI.Shift;
+using UnityEngine.UI;
 
 public class StoryController : MonoBehaviour
 {
@@ -30,9 +24,24 @@ public class StoryController : MonoBehaviour
 
     [Header ("Audio")]
     [SerializeField] private AudioSource audioSource;
-    
+
+    [Header("Spacebar To Continue Animation")]
+    [SerializeField] private CanvasGroup spaceBarCanvas;
+    [SerializeField] private Animator textAnim;
+
+    [Header("Loading")]
+    [SerializeField] private CanvasGroup loading;
+
+    [Header("TimedEvent")]
+    [SerializeField] private TimedEvent timedEventScript;
+
+    [Header("Start Game Script")]
+    [SerializeField] private StartGameScene startGameScript;
+
+
     private int _sentenceIndex = -1;
     private int _textIndex = -1;
+    private int _textBlinkIndex = 0;
 
     private bool _isHidden = false;
 
@@ -49,6 +58,13 @@ public class StoryController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            startGameScript.StartGame();
+        }
+    }
     private void Speak(int index)
     {
         speakerScript.text = text[index];
@@ -81,9 +97,25 @@ public class StoryController : MonoBehaviour
         controller.currentTextIndex += 1;
         _textIndex += 1;
         controller.ChangeBackgroundImage();
-        Speak(_textIndex);
-        PlayNextSentence();
-        StartCoroutine(TypeSound());
+        if (_textBlinkIndex == 1)
+        {
+            StartCoroutine(DisableSpaceBarCanvas());
+        }
+        else
+        {
+            spaceBarCanvas.alpha = 0;
+        }
+        if (_textIndex != 8)
+        {
+            Speak(_textIndex);
+            PlayNextSentence();
+            StartCoroutine(TypeSound());
+        }
+        else
+        {
+            loading.alpha = 1;
+            timedEventScript.StartIEnumerator();
+        }
     }
 
     public void PlayNextSentence()
@@ -116,6 +148,8 @@ public class StoryController : MonoBehaviour
             {
                 state = State.COMPLETED;
                 audioSource.Stop();
+                StartCoroutine(EnableSpaceBarCanvas());
+                _textBlinkIndex = 1;
                 break;
             }
         }
@@ -125,5 +159,29 @@ public class StoryController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         audioSource.Play();
+    }
+
+    private IEnumerator EnableSpaceBarCanvas()
+    {
+        spaceBarCanvas.alpha = 0f;
+        yield return new WaitForSeconds(0.15f);
+        spaceBarCanvas.alpha = 0.3f;
+        yield return new WaitForSeconds(0.15f);
+        spaceBarCanvas.alpha = 0.6f;
+        yield return new WaitForSeconds(0.15f);
+        spaceBarCanvas.alpha = 1f;
+        textAnim.SetTrigger("TriggerStart");
+    }
+
+    private IEnumerator DisableSpaceBarCanvas()
+    {
+        spaceBarCanvas.alpha = 1f;
+        yield return new WaitForSeconds(0.03f);
+        spaceBarCanvas.alpha = 0.6f;
+        yield return new WaitForSeconds(0.03f);
+        spaceBarCanvas.alpha = 0.3f;
+        yield return new WaitForSeconds(0.03f);
+        spaceBarCanvas.alpha = 0f;
+        textAnim.SetTrigger("TriggerStop");
     }
 }

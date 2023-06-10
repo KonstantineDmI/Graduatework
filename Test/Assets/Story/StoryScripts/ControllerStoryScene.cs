@@ -70,7 +70,10 @@ public class ControllerStoryScene : MonoBehaviour
         storyControllerScript.ClearText();
         storyControllerScript.Show();
         yield return new WaitForSeconds(0.6f);
-        storyControllerScript.PlayScene(scene);
+        if (currentTextIndex != 8)
+        {
+            storyControllerScript.PlayScene(scene);
+        }
         state = State.IDLE;
     }
 }

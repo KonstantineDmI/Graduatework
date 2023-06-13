@@ -10,6 +10,7 @@ namespace Gameplay.FactorySystem.Configurations
     {
         public int id;
         public int price;
+        public string name;
         public Sprite sprite;
     }
 

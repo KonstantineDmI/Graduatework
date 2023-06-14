@@ -8,6 +8,7 @@ namespace Michsky.UI.Shift
         {
             Debug.Log("Exit function is working on build mode.");
             Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }

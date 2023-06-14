@@ -122,7 +122,7 @@ public class StoryController : MonoBehaviour
     {
         StartCoroutine(TypeText(currentText.sentences[++_sentenceIndex].text));
     }
-    
+
     public bool IsLastSentence()
     {
         return _sentenceIndex + 1 == currentText.sentences.Count;

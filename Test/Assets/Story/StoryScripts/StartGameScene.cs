@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class StartGameScene : MonoBehaviour
 {
+    [SerializeField] private string sceneName;
     public void StartGame()
     {
-        StartCoroutine(LoadSceneAsyncCoroutine("GamePlayScene"));
+        StartCoroutine(LoadSceneAsyncCoroutine(sceneName));
     }
 
     private IEnumerator LoadSceneAsyncCoroutine(string sceneName)
@@ -25,5 +26,4 @@ public class StartGameScene : MonoBehaviour
             yield return null;
         }
     }
-
 }

@@ -25,14 +25,14 @@ MonoBehaviour:
     - 1
   - factoryId: 1
     level: 0
-    upgradesCost: 64000000c80000002c01000090010000f4010000
-    capacityLevels: 140000001e00000028000000320000003c000000
+    upgradesCost: 2c0100009001000058020000e8030000d0070000
+    capacityLevels: 1e000000320000003c0000004100000046000000
     productionSpeedLevels:
+    - 5
+    - 4
+    - 3.5
     - 3
-    - 2.5
-    - 2
     - 1.5
-    - 1
   - factoryId: 2
     level: 0
     upgradesCost: 64000000c80000002c01000090010000f4010000
@@ -54,7 +54,7 @@ MonoBehaviour:
     - 1.5
     - 1
   - factoryId: 4
-    level: 0
+    level: 1
     upgradesCost: 64000000c80000002c01000090010000f4010000
     capacityLevels: 140000001e00000028000000320000003c000000
     productionSpeedLevels:

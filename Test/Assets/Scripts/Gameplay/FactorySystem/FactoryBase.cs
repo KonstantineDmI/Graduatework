@@ -16,6 +16,13 @@ namespace Gameplay.FactorySystem
         [SerializeField] private ItemsPool itemsPool;
         [SerializeField] private Transform instantiateItemsPoint;
 
+        public int Id => factoryEntity.Id;
+
+        public void CheckUpgrades()
+        {
+            factoryEntity.UpdateUpgrades();
+        }
+
         private void Start()
         {
             factoryEntity.OnGrabItem += AnimateItemIn;

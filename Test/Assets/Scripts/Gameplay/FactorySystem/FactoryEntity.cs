@@ -30,6 +30,8 @@ namespace Gameplay.FactorySystem
         public event Action<int, Transform> OnPutItem;
 
         public float ManufactureDuration => manufactureDuration;
+
+        public int Id => id;
         
 
         public void InitializeStorages()
@@ -89,6 +91,16 @@ namespace Gameplay.FactorySystem
         public void InitializeFactory()
         {
             conveyor.SetActive(false);
+            var factoryUpgradeConfig = factoriesUpgradeConfig.upgradeEntities.Find(upgrade => upgrade.factoryId == id);
+            var manufactureSpeed = factoryUpgradeConfig.productionSpeedLevels[factoryUpgradeConfig.level];
+            var capacity = factoryUpgradeConfig.capacityLevels[factoryUpgradeConfig.level];
+            manufactureDuration = manufactureSpeed;
+            storageToFill.InitializeCapacity(capacity);
+            storageToGrab.InitializeCapacity(capacity);
+        }
+
+        public void UpdateUpgrades()
+        {
             var factoryUpgradeConfig = factoriesUpgradeConfig.upgradeEntities.Find(upgrade => upgrade.factoryId == id);
             var manufactureSpeed = factoryUpgradeConfig.productionSpeedLevels[factoryUpgradeConfig.level];
             var capacity = factoryUpgradeConfig.capacityLevels[factoryUpgradeConfig.level];

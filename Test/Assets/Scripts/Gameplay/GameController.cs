@@ -33,6 +33,7 @@ namespace Gameplay
             shop.OnPlayerEnter += StartShopTriggerActionTracking;
             shop.OnPlayerExit += StopTriggerActionTracking;
 
+
             questSpots.ForEach(q =>
             {
                 q.OnPlayerEnter += StartQuestTriggerActionTracking;
@@ -44,6 +45,8 @@ namespace Gameplay
                 s.OnPlayerEnter += StartTriggerActionTracking;
                 s.OnPlayerExit += StopTriggerActionTracking;
             });
+
+            walletController.IncreaseBalance(10000000);
         }
 
         private void StartTriggerActionTracking(StorageBase storage, List<int> itemsIds, int value)

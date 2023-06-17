@@ -15,15 +15,25 @@ namespace Gameplay.FactorySystem.Storage
         [SerializeField] private List<ItemsHolder> _itemsHolders;
 
         public List<ItemsHolder> ItemsHolder => _itemsHolders;
+        
         public int MaxCapacity => maxCapacity;
+
+        private List<Item> _items = new List<Item>();
+
 
         public void InitializeMaxCapacity(int currentValue)
         {
+            Debug.Log(currentValue);
             maxCapacity = currentValue;
+            if(_items.Count != 0)
+            {
+                SetItemsToStorage(_items);
+            }
         }
 
         public void SetItemsToStorage(List<Item> items)
         {
+            _items = items;
             _itemsHolders = new List<ItemsHolder>();
             items.ForEach(i =>
             {

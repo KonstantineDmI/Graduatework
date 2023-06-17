@@ -15,7 +15,7 @@ namespace Gameplay.FactorySystem.Items
         {
             itemsToInstantiate.ForEach(x =>
             {
-                for(int i = 0; i < 20; i++)
+                for(int i = 0; i < 200; i++)
                 {
                     var item = Instantiate(x, transform);
                     item.gameObject.SetActive(false);

@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 30798470}
   - component: {fileID: 30798469}
   - component: {fileID: 30798473}
+  - component: {fileID: 30798474}
   m_Layer: 0
   m_Name: CFXR3 Magic Aura A (Runic)
   m_TagString: Untagged
@@ -5432,6 +5433,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 5
+--- !u!114 &30798474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30798467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1763752adc0a3a54e8daaf85ebbfc11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5
 --- !u!4 &35748481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8222688165265293479, guid: 2909cad856b6cfa4082d7e1a83183bdf, type: 3}
@@ -5744,7 +5758,7 @@ PrefabInstance:
       objectReference: {fileID: 2132214335}
     - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
       propertyPath: factoryEntity.id
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
       propertyPath: factoryEntity.storageToFill
@@ -13752,6 +13766,7 @@ GameObject:
   - component: {fileID: 319359581}
   - component: {fileID: 319359580}
   - component: {fileID: 319359584}
+  - component: {fileID: 319359585}
   m_Layer: 0
   m_Name: CFXR3 Magic Aura A (Runic)
   m_TagString: Untagged
@@ -18727,6 +18742,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccdf9f3b75c64b2408b3df46ce9da8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
+--- !u!114 &319359585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319359578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1763752adc0a3a54e8daaf85ebbfc11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
@@ -25310,7 +25338,7 @@ PrefabInstance:
       objectReference: {fileID: 2132214335}
     - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
       propertyPath: factoryEntity.id
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
       propertyPath: factoryEntity.storageToFill
@@ -25387,6 +25415,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 718159479662565306, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
   m_PrefabInstance: {fileID: 472641709}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &472641711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
+  m_PrefabInstance: {fileID: 472641709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7bf2d2abce2be4ea1d2295d2fd0952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &476583123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476312, guid: a5db47d41acb97046af5c144644ebdee, type: 3}
@@ -26440,6 +26479,7 @@ GameObject:
   - component: {fileID: 545993330}
   - component: {fileID: 545993329}
   - component: {fileID: 545993333}
+  - component: {fileID: 545993334}
   m_Layer: 0
   m_Name: CFXR3 Magic Aura A (Runic)
   m_TagString: Untagged
@@ -31415,6 +31455,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccdf9f3b75c64b2408b3df46ce9da8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+--- !u!114 &545993334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545993327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1763752adc0a3a54e8daaf85ebbfc11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
@@ -38409,23 +38462,23 @@ MonoBehaviour:
   - id: 1
     name: Tool factory
     price: 10000
-    unlocked: 1
+    unlocked: 0
   - id: 2
     name: Tape factory
     price: 20000
-    unlocked: 1
+    unlocked: 0
   - id: 3
     name: Gas factory
     price: 30000
-    unlocked: 1
+    unlocked: 0
   - id: 4
     name: Chip factory
     price: 50000
-    unlocked: 1
+    unlocked: 0
   - id: 5
     name: Microchip factory
     price: 80000
-    unlocked: 1
+    unlocked: 0
   factories:
   - id: 1
     objectToEnable: {fileID: 715611313}
@@ -38448,8 +38501,21 @@ MonoBehaviour:
   - {fileID: 1600416300}
   - {fileID: 319359584}
   - {fileID: 30798473}
+  factoriesUpgradeSpot:
+  - {fileID: 2137785392}
+  - {fileID: 545993334}
+  - {fileID: 1600416301}
+  - {fileID: 319359585}
+  - {fileID: 30798474}
+  factoriesEntities:
+  - {fileID: 1130567533}
+  - {fileID: 1841844981}
+  - {fileID: 834620741}
+  - {fileID: 472641711}
+  - {fileID: 1762720766}
   wallet: {fileID: 1621640911}
   view: {fileID: 102148856}
+  upgradeConfig: {fileID: 11400000, guid: 3ffb27417dc60f943895b97ae5479514, type: 2}
 --- !u!4 &778453086
 Transform:
   m_ObjectHideFlags: 0
@@ -43843,6 +43909,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 718159479662565306, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
   m_PrefabInstance: {fileID: 834620739}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &834620741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
+  m_PrefabInstance: {fileID: 834620739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7bf2d2abce2be4ea1d2295d2fd0952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &840742525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 418254, guid: fcc9c05aa0d907f468a33988dfc9a0a6, type: 3}
@@ -96039,6 +96116,7 @@ GameObject:
   - component: {fileID: 1600416297}
   - component: {fileID: 1600416296}
   - component: {fileID: 1600416300}
+  - component: {fileID: 1600416301}
   m_Layer: 0
   m_Name: CFXR3 Magic Aura A (Runic)
   m_TagString: Untagged
@@ -101017,6 +101095,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+--- !u!114 &1600416301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600416294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1763752adc0a3a54e8daaf85ebbfc11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
 --- !u!4 &1601362719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6294508013172393185, guid: 043176b6a68be2b43b073aaaa4782c7d, type: 3}
@@ -102088,7 +102179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3845025421726268559, guid: 92fe32354684bb046b94eee00feacad7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 932.64355
+      value: 934.08
       objectReference: {fileID: 0}
     - target: {fileID: 3845025421726268559, guid: 92fe32354684bb046b94eee00feacad7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -103163,6 +103254,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 718159479662565306, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
   m_PrefabInstance: {fileID: 56940067}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1762720766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8290513932706388631, guid: 54e0a1c5b2b72fd4eb7ee9e8a383b039, type: 3}
+  m_PrefabInstance: {fileID: 56940067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7bf2d2abce2be4ea1d2295d2fd0952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1765834071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117106,6 +117208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -117630,6 +117733,7 @@ GameObject:
   - component: {fileID: 2137785388}
   - component: {fileID: 2137785387}
   - component: {fileID: 2137785391}
+  - component: {fileID: 2137785392}
   m_Layer: 0
   m_Name: CFXR3 Magic Aura A (Runic)
   m_TagString: Untagged
@@ -122605,6 +122709,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccdf9f3b75c64b2408b3df46ce9da8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+--- !u!114 &2137785392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137785385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1763752adc0a3a54e8daaf85ebbfc11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1

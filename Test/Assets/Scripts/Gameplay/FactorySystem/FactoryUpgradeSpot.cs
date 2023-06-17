@@ -1,16 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class FactoryBuySpot : MonoBehaviour
+using System;
+public class FactoryUpgradeSpot : MonoBehaviour
 {
-    [SerializeField] private int id;
+    public int id;
 
-    public event Action<int> OnBuy;
     public event Action<int> OnUpgradeBuy;
     public event Action<int, bool> OnActive;
-    
+
 
     private bool _isActive;
 
@@ -23,7 +21,7 @@ public class FactoryBuySpot : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            OnBuy?.Invoke(id);
+            OnUpgradeBuy?.Invoke(id);
         }
     }
 

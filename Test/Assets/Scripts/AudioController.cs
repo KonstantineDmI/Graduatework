@@ -7,41 +7,46 @@ public class AudioController : MonoBehaviour
     private AudioSource _audioSource;
     private int _soundIndex = 0;
 
+    private bool _isCoroutineRunning = false;
+
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        _audioSource.clip = sounds[_soundIndex];
-        StartCoroutine(WaitBeforeNextMusic());
-        _audioSource.Play();
+        StartCoroutine(WaitBeforeStartMusic(1f));
     }
 
     private void Update()
     {
-        ChangeMusic();
-    }
-
-    private void ChangeMusic()
-    {
-        if (!_audioSource.isPlaying)
+        if (!_isCoroutineRunning && !_audioSource.isPlaying)
         {
-            _audioSource.Stop();
-            StartCoroutine(WaitBeforeNextMusic());
-            if (_soundIndex < sounds.Length)
-            {
-                _soundIndex += 1;
-                _audioSource.clip = sounds[_soundIndex];
-                _audioSource.Play();
-            }
-            
-            if (_soundIndex > sounds.Length)
-            {
-                _soundIndex = 0;
-            }
+            StartCoroutine(WaitBeforeNextMusic(2f));
         }
     }
 
-    private IEnumerator WaitBeforeNextMusic()
+    private IEnumerator WaitBeforeStartMusic(float waitForSeconds)
     {
-        yield return new WaitForSeconds(1f);
+        _isCoroutineRunning = true;
+        yield return new WaitForSeconds(waitForSeconds);
+        _audioSource.clip = sounds[_soundIndex];
+        _audioSource.Play();
+        _isCoroutineRunning = false;
+    }
+
+    private IEnumerator WaitBeforeNextMusic(float waitForSeconds)
+    {
+        _isCoroutineRunning = true;
+        _audioSource.Stop();
+        yield return new WaitForSeconds(waitForSeconds);
+        if (_soundIndex < sounds.Length - 1)
+        {
+            _soundIndex += 1;
+        }
+        else
+        {
+            _soundIndex = 0;
+        }
+        _audioSource.clip = sounds[_soundIndex];
+        _audioSource.Play();
+        _isCoroutineRunning = false;
     }
 }

@@ -15,6 +15,23 @@ public class MainLevelButton : MonoBehaviour
 
     private void NextLevel()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadSceneAsyncCoroutine(1));
+    }
+
+    private IEnumerator LoadSceneAsyncCoroutine(int sceneIndex)
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Single);
+        asyncOperation.allowSceneActivation = false;
+
+        while (!asyncOperation.isDone)
+        {
+            // Check if the scene has finished loading.
+            if (asyncOperation.progress >= 0.9f)
+            {
+                asyncOperation.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
     }
 }

@@ -40,6 +40,13 @@ namespace Gameplay.PlayerBehaviour
             });
         }
 
+
+        public int GetTotalCapacity(int id)
+        {
+            var currentItem = walletEntity.items.Find(i => i.itemId == id);
+            return currentItem.itemsCapacity;
+        }
+
         public void IncreaseBalance(int value)
         {
             walletEntity.moneyBalance += value;

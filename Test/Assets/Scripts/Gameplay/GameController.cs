@@ -30,8 +30,8 @@ namespace Gameplay
 
         private void Initialize()
         {
-            shop.OnPlayerEnter += StartShopTriggerActionTracking;
-            shop.OnPlayerExit += StopTriggerActionTracking;
+            //shop.OnPlayerEnter += StartShopTriggerActionTracking;
+            //shop.OnPlayerExit += StopTriggerActionTracking;
 
 
             questSpots.ForEach(q =>
@@ -54,10 +54,10 @@ namespace Gameplay
             _triggerActionRoutine = StartCoroutine(TriggerActionCoroutine(storage, itemsIds, value));
         }
 
-        private void StartShopTriggerActionTracking(ShopBase shopBase, int value)
-        {
-            _triggerActionRoutine = StartCoroutine(ShopTriggerActionCoroutine(shopBase, value));
-        }
+        //private void StartShopTriggerActionTracking(ShopBase shopBase, int value)
+        //{
+        //    _triggerActionRoutine = StartCoroutine(ShopTriggerActionCoroutine(shopBase, value));
+        //}
 
         private void StartQuestTriggerActionTracking(SideQuest sideQuest)
         {
@@ -70,14 +70,14 @@ namespace Gameplay
             _triggerActionRoutine = null;
         }
 
-        private IEnumerator ShopTriggerActionCoroutine(ShopBase shopBase, int value)
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(playerController.GrabDuration);
-                SellTriggerAction(shopBase, value);
-            }
-        }
+        //private IEnumerator ShopTriggerActionCoroutine(ShopBase shopBase, int value)
+        //{
+        //    while (true)
+        //    {
+        //        yield return new WaitForSeconds(playerController.GrabDuration);
+        //        SellTriggerAction(shopBase, value);
+        //    }
+        //}
 
         private IEnumerator QuestTriggerActionCoroutine(SideQuest sideQuest)
         {
@@ -97,24 +97,24 @@ namespace Gameplay
             }
         }
 
-        private void SellTriggerAction(ShopBase shopBase, int value)
-        {
-            walletController.GetExistingItemsIds().ForEach(itemId =>
-            {
-                if (walletController.HaveNoItems(itemId))
-                {
-                    return;
-                }
-                walletController.IncreaseBalance(itemsConfigsHolder.itemsConfigs.Find(i => i.id == itemId).price);
-                walletController.DecreaseWallet(itemId, value);
-                //if (!playerController.BackPackView.ItemByIdIsExist(itemId))
-                //{
-                //    return;
-                //}
-                //var item = playerController.BackPackView.GetItemById(itemId);
-                //itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
-            });
-        }
+        //private void SellTriggerAction(ShopBase shopBase, int value)
+        //{
+        //    walletController.GetExistingItemsIds().ForEach(itemId =>
+        //    {
+        //        if (walletController.HaveNoItems(itemId))
+        //        {
+        //            return;
+        //        }
+        //        walletController.IncreaseBalance(itemsConfigsHolder.itemsConfigs.Find(i => i.id == itemId).price);
+        //        walletController.DecreaseWallet(itemId, value);
+        //        //if (!playerController.BackPackView.ItemByIdIsExist(itemId))
+        //        //{
+        //        //    return;
+        //        //}
+        //        //var item = playerController.BackPackView.GetItemById(itemId);
+        //        //itemsPool.ItemsVisualAnimation.MakeTransitionAnimation(item, playerController.BackPackView.RemoveItem(itemId), shop.transform, true);
+        //    });
+        //}
 
         private void QuestTriggerAction(SideQuest sideQuest)
         {

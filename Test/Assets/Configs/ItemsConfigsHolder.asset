@@ -15,7 +15,7 @@ MonoBehaviour:
   itemsConfigs:
   - id: 0
     price: 1000
-    name: Hummer
+    name: Hammer
     sprite: {fileID: 21300000, guid: 7439381cbb74b7c419afa2d3ab0c33ec, type: 3}
   - id: 1
     price: 1300
@@ -32,8 +32,8 @@ MonoBehaviour:
   - id: 4
     price: 10000
     name: Chip
-    sprite: {fileID: 21300000, guid: 3468be5ea5709c54f8c839d081fa5a4e, type: 3}
+    sprite: {fileID: 21300000, guid: 4d44aa3e6f8bfbc49af6fcca96dd5cbb, type: 3}
   - id: 5
     price: 13000
     name: Microchip
-    sprite: {fileID: 21300000, guid: 4d44aa3e6f8bfbc49af6fcca96dd5cbb, type: 3}
+    sprite: {fileID: 21300000, guid: 3468be5ea5709c54f8c839d081fa5a4e, type: 3}

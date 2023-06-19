@@ -56,7 +56,7 @@ public class FactoriesShop : MonoBehaviour
             if(level < upgradeConfig.upgradeEntities.Find(x => x.factoryId == id).upgradesCost.Count)
             {
                 var upgrade = upgradeConfig.upgradeEntities.Find(x => x.factoryId == id).upgradesCost[level];
-                view.SetText(factory.name, upgrade.ToString());
+                view.SetText("Do you really want to upgrade {0} for {1}?",factory.name, upgrade.ToString());
             }
         }
 
@@ -72,7 +72,7 @@ public class FactoriesShop : MonoBehaviour
         }
         if (state)
         {
-            view.SetText(factoryEntity.name, factoryEntity.price.ToString());
+            view.SetText("Do you really want to buy {0} for {1}?" , factoryEntity.name, factoryEntity.price.ToString());
         }
         view.Activate(state);
     }

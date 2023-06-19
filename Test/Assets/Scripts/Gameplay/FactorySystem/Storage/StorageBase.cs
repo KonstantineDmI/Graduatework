@@ -35,7 +35,7 @@ namespace Gameplay.FactorySystem.Storage
             currentStorage.itemsCapacity += value;
             var currentView = storageView.Find(v => v.ItemId == id);
             currentView.UpdateView(currentStorage.itemsCapacity);
-            currentView.SetFullMarkActive(StorageIsFull());
+            //currentView.SetFullMarkActive(StorageIsFull());
         }
         
         public void GrabFromStorage(int id, int value)
@@ -44,7 +44,7 @@ namespace Gameplay.FactorySystem.Storage
             currentStorage.itemsCapacity -= value;
             var currentView = storageView.Find(v => v.ItemId == id);
             currentView.UpdateView(currentStorage.itemsCapacity);
-            currentView.SetFullMarkActive(StorageIsFull());
+            //currentView.SetFullMarkActive(StorageIsFull());
         }
         
         public bool StorageIsFull()

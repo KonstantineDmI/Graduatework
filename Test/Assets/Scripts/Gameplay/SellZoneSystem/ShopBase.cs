@@ -5,22 +5,21 @@ using UnityEngine;
 
 public class ShopBase : MonoBehaviour
 {
-    public event Action<ShopBase, int> OnPlayerEnter;
-    public event Action OnPlayerExit;
+    public ShopController shopController;
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            OnPlayerEnter?.Invoke(this, 1);
+            shopController.Activate(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            OnPlayerExit?.Invoke();
+            shopController.Activate(false);
         }
     }
 }

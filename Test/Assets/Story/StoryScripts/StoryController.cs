@@ -135,7 +135,7 @@ public class StoryController : MonoBehaviour
 
     private IEnumerator TypeText(string text)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         storyText.text = "";
         state = State.PLAYING;
         int wordIndex = 0;
@@ -157,7 +157,7 @@ public class StoryController : MonoBehaviour
 
     private IEnumerator TypeSound()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         audioSource.Play();
     }
 
